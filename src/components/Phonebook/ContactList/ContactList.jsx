@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes, { shape } from 'prop-types';
 import { Button } from '@mui/material';
 
 const ContactList = ({ contacts, onDelete }) => {
@@ -21,4 +22,10 @@ const ContactList = ({ contacts, onDelete }) => {
     </ul>
   );
 };
+
+ContactList.propTypes = {
+  contacts: PropTypes.arrayOf(shape),
+  onDelete: PropTypes.func.isRequired,
+};
+
 export default ContactList;

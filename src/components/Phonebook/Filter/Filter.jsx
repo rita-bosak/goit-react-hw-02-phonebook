@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { TextField } from '@mui/material';
 
 const Filter = ({ value, onChange }) => {
@@ -13,6 +14,11 @@ const Filter = ({ value, onChange }) => {
       onChange={onChange}
     />
   );
+};
+
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default Filter;
