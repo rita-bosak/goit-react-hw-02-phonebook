@@ -21,7 +21,7 @@ export default class Phonebook extends React.Component {
 
     for (const contact of this.state.contacts) {
       if (contact.name === newContact.name) {
-        return alert('This contact is already exists');
+        return alert('This contact already exists');
       }
     }
     this.setState(prevState => {
