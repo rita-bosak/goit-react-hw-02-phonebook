@@ -5,10 +5,10 @@ import { Button } from '@mui/material';
 const ContactList = ({ contacts, onDelete }) => {
   return (
     <ul>
-      {contacts.map((contact, index) => {
+      {contacts.map(contact => {
         const { id, name, number } = contact;
         const handleDeleteContact = () => {
-          onDelete(index);
+          onDelete(contact);
         };
         return (
           <li key={id}>
