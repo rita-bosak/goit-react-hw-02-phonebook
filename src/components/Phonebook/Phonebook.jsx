@@ -31,9 +31,13 @@ export default class Phonebook extends React.Component {
 
   deleteContactHandler = contactToDelete => {
     this.setState(prevState => {
-      const contactIndex = prevState.contacts.indexOf(contactToDelete);
-      prevState.contacts.splice(contactIndex, 1);
-      return { contacts: [...prevState.contacts] };
+      const filteredState = prevState.contacts.filter(
+        contact => contact !== contactToDelete
+      );
+
+      return {
+        contacts: [...filteredState],
+      };
     });
   };
 
