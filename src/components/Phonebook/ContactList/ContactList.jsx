@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes, { shape } from 'prop-types';
-import ContactListItem from 'components/ContactListItem/ContactListItem';
+import ContactListItem from '../ContactListItem/ContactListItem';
 
 const ContactList = ({ contacts, onDelete }) => {
   return (
